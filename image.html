@@ -69,17 +69,12 @@
       <div class="hero-content">
         <div class="hero-text">
           <span class="hero-small-title">TRINA HOOK</span>
-          <h1>Des pièces d'exception pour des moments précieux.</h1>
-          <p>
-            Chaque création est entièrement réalisée à la main avec une
-            attention infinie aux détails et une passion qui se ressent dans
-            chaque maille.
-          </p>
-          <p>
-            Découvrez des pièces uniques au charme intemporel, conçues pour
-            envelopper votre quotidien de douceur et sublimer votre style.
-          </p>
-          <a href="#creations" class="hero-button">Voir nos créations</a>
+          <h1 data-content="galleryHeroTitle">Des pièces d'exception pour des moments précieux.</h1>
+          <div data-paragraphs="galleryHeroParagraphs">
+            <p>Chaque création est entièrement réalisée à la main avec une attention infinie aux détails et une passion qui se ressent dans chaque maille.</p>
+            <p>Découvrez des pièces uniques au charme intemporel, conçues pour envelopper votre quotidien de douceur et sublimer votre style.</p>
+          </div>
+          <a href="#creations" class="hero-button" data-content="galleryHeroButton">Voir nos créations</a>
         </div>
 
         <div class="hero-image">
@@ -118,16 +113,20 @@
           <span class="category-icon">✿</span>
           Enfants
         </button>
+        <button class="category-btn" data-filter="accessoires" type="button">
+          <span class="category-icon">◇</span>
+          Accessoires
+        </button>
       </div>
     </section>
 
     <main id="creations" class="gallery-section">
       <div class="gallery-heading">
-        <span>FAIT MAIN AVEC PASSION</span>
-        <h2>Nos Créations</h2>
+        <span data-content="galleryEyebrow">FAIT MAIN AVEC PASSION</span>
+        <h2 data-content="galleryTitle">Nos Créations</h2>
       </div>
 
-      <div class="gallery-grid">
+      <div class="gallery-grid" id="creation-gallery">
         <article class="creation-card" data-category="femmes">
           <div class="image-wrapper">
             <img
@@ -811,12 +810,12 @@
 
     <section class="collection-cta">
       <div>
-        <span>UNE CRÉATION VOUS PLAÎT ?</span>
-        <h2>
+        <span data-content="collectionEyebrow">UNE CRÉATION VOUS PLAÎT ?</span>
+        <h2 data-content="collectionTitle">
           Créons quelque chose<br />
           d'unique pour vous.
         </h2>
-        <p>
+        <p data-content="collectionDescription">
           Chaque pièce peut être personnalisée selon vos envies, vos couleurs et
           vos dimensions.
         </p>
@@ -827,7 +826,7 @@
           class="cta-button"
         >
           <i class="fa-brands fa-whatsapp"></i>
-          Commander sur WhatsApp
+          <span data-content="collectionButton">Commander sur WhatsApp</span>
         </a>
       </div>
     </section>
@@ -908,32 +907,7 @@
         });
       });
 
-      const categoryButtons = document.querySelectorAll(".category-btn");
-      const creationCards = document.querySelectorAll(".creation-card");
-      const emptyMessage = document.querySelector("#empty-message");
-
-      categoryButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          categoryButtons.forEach((btn) => btn.classList.remove("active"));
-          button.classList.add("active");
-
-          const filter = button.dataset.filter;
-          let visibleCards = 0;
-
-          creationCards.forEach((card) => {
-            const category = card.dataset.category;
-
-            if (filter === "all" || category === filter) {
-              card.classList.remove("hidden");
-              visibleCards++;
-            } else {
-              card.classList.add("hidden");
-            }
-          });
-
-          emptyMessage.classList.toggle("show", visibleCards === 0);
-        });
-      });
     </script>
+    <script src="content-loader.js"></script>
   </body>
 </html>

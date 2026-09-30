@@ -1,0 +1,49 @@
+{
+  "homeHeroTitle": "L'élégance du fait main, pensée pour vous.",
+  "homeHeroDescription": "Des créations uniques réalisées avec passion, où chaque maille raconte une histoire et chaque détail révèle notre savoir-faire.",
+  "homeHeroButton": "Découvrir nos créations",
+  "homeCreationsEyebrow": "FAIT MAIN AVEC PASSION",
+  "homeCreationsTitle": "Nos créations",
+  "homeCreationsDescription": "Découvrez une sélection de nos pièces imaginées et réalisées entièrement à la main.",
+  "homeCreationsButton": "Voir toute la collection",
+  "storyEyebrow": "NOTRE HISTOIRE",
+  "storyTitle": "Une passion transformée en créations uniques.",
+  "storyParagraphs": [
+    "Derrière Trina Hook se cache une passion profonde pour l'art du crochet et du fait main.",
+    "Chaque création est pensée, dessinée et réalisée à la main avec patience et précision. Nous accordons une attention particulière aux détails afin de proposer des pièces uniques, élégantes et durables.",
+    "Nous sélectionnons avec soin nos matières afin d'offrir à chaque client douceur, confort et qualité."
+  ],
+  "storyButton": "Découvrir notre univers",
+  "processEyebrow": "NOTRE SAVOIR-FAIRE",
+  "processTitle": "L'art du fait main",
+  "processDescription": "Chaque étape est réalisée avec passion pour garantir une création qui vous ressemble.",
+  "processSteps": [
+    {
+      "title": "Le Concept",
+      "icon": "lightbulb",
+      "description": "Nous imaginons des designs modernes, élégants et intemporels qui donnent une nouvelle dimension à l'art du crochet."
+    },
+    {
+      "title": "La Fabrication",
+      "icon": "hand-sparkles",
+      "description": "Chaque pièce est confectionnée à la main avec patience, précision et une attention particulière portée aux finitions."
+    },
+    {
+      "title": "La Livraison",
+      "icon": "box-open",
+      "description": "Chaque commande est préparée avec soin afin que votre création arrive dans les meilleures conditions."
+    }
+  ],
+  "galleryHeroTitle": "Des pièces d'exception pour des moments précieux.",
+  "galleryHeroParagraphs": [
+    "Chaque création est entièrement réalisée à la main avec une attention infinie aux détails et une passion qui se ressent dans chaque maille.",
+    "Découvrez des pièces uniques au charme intemporel, conçues pour envelopper votre quotidien de douceur et sublimer votre style."
+  ],
+  "galleryHeroButton": "Voir nos créations",
+  "galleryEyebrow": "FAIT MAIN AVEC PASSION",
+  "galleryTitle": "Nos créations",
+  "collectionEyebrow": "UNE CRÉATION VOUS PLAÎT ?",
+  "collectionTitle": "Créons quelque chose d'unique pour vous.",
+  "collectionDescription": "Chaque pièce peut être personnalisée selon vos envies, vos couleurs et vos dimensions.",
+  "collectionButton": "Commander sur WhatsApp"
+}

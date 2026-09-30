@@ -14,7 +14,7 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  background: #e7e1df;
+  background: #f5f1ed;
   color: #1b1a1a;
   font-family: "Cormorant Garamond", serif;
   overflow-x: hidden;
@@ -239,7 +239,7 @@ ul {
   text-align: center;
 }
 
-.section-heading {
+.section-heading > span {
   display: block;
   margin-bottom: 10px;
   color: #92717f;
@@ -251,9 +251,9 @@ ul {
 .section-heading h2 {
   margin-bottom: 15px;
   color: #211e1f;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Cormorant Garamond", serif;
   font-size: clamp(32px, 4vw, 48px);
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .section-heading p {
@@ -264,7 +264,7 @@ ul {
 
 .creations-section {
   padding: 100px 7%;
-  background: #e7e1df;
+  background: #f5f1ed;
 }
 
 .creations-grid {
@@ -278,8 +278,8 @@ ul {
 
 .creation-card {
   overflow: hidden;
-  background: #e6e4e3;
-  border-radius: 20px;
+  background: #fff;
+  border-radius: 8px;
   box-shadow: 0 8px 25px rgba(40, 30, 30, 0.08);
   transition:
     transform 0.4s ease,
@@ -438,7 +438,7 @@ ul {
   text-align: center;
   background: #fff;
   border: 1px solid #e8e0df;
-  border-radius: 22px;
+  border-radius: 8px;
   box-shadow: 0 8px 25px rgba(30, 20, 20, 0.05);
   transition:
     transform 0.35s ease,
@@ -494,7 +494,7 @@ ul {
 .footer-box h3,
 .footer-box h4 {
   margin-bottom: 18px;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 400;
 }
 
@@ -570,6 +570,31 @@ ul {
   max-width: none;
   color: #777272;
   font-size: 15px;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.creation-card.scroll-reveal.is-visible:hover {
+  transform: translateY(-8px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (max-width: 1100px) {

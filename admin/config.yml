@@ -1,0 +1,141 @@
+backend:
+  name: turbo-github
+  turbo_site_id: d2b47249-5c72-4720-9ee2-74ad28666ab2
+  branch: main
+
+locale: fr
+media_folder: Images
+public_folder: /Images
+
+collections:
+  - name: pages
+    label: Textes du site
+    files:
+      - name: site
+        label: Pages et textes
+        file: content/site.json
+        fields:
+          - { label: Titre d'accueil, name: homeHeroTitle, widget: string }
+          - { label: Texte d'accueil, name: homeHeroDescription, widget: text }
+          - { label: Bouton d'accueil, name: homeHeroButton, widget: string }
+          - {
+              label: Titre de la sélection,
+              name: homeCreationsEyebrow,
+              widget: string,
+            }
+          - {
+              label: Titre de la section créations,
+              name: homeCreationsTitle,
+              widget: string,
+            }
+          - {
+              label: Présentation des créations,
+              name: homeCreationsDescription,
+              widget: text,
+            }
+          - {
+              label: Bouton vers la galerie,
+              name: homeCreationsButton,
+              widget: string,
+            }
+          - {
+              label: Petit titre de l'histoire,
+              name: storyEyebrow,
+              widget: string,
+            }
+          - { label: Titre de l'histoire, name: storyTitle, widget: string }
+          - label: Paragraphes de l'histoire
+            name: storyParagraphs
+            widget: list
+            field: { label: Paragraphe, name: paragraph, widget: text }
+          - { label: Bouton de l'histoire, name: storyButton, widget: string }
+          - {
+              label: Petit titre du savoir-faire,
+              name: processEyebrow,
+              widget: string,
+            }
+          - { label: Titre du savoir-faire, name: processTitle, widget: string }
+          - {
+              label: Présentation du savoir-faire,
+              name: processDescription,
+              widget: text,
+            }
+          - label: Étapes du savoir-faire
+            name: processSteps
+            widget: list
+            fields:
+              - { label: Titre, name: title, widget: string }
+              - label: Icône
+                name: icon
+                widget: select
+                options:
+                  - { label: Idée, value: lightbulb }
+                  - { label: Fabrication, value: hand-sparkles }
+                  - { label: Colis, value: box-open }
+              - { label: Description, name: description, widget: text }
+          - {
+              label: Titre de la galerie,
+              name: galleryHeroTitle,
+              widget: string,
+            }
+          - label: Textes d'introduction de la galerie
+            name: galleryHeroParagraphs
+            widget: list
+            field: { label: Paragraphe, name: paragraph, widget: text }
+          - {
+              label: Bouton de la galerie,
+              name: galleryHeroButton,
+              widget: string,
+            }
+          - {
+              label: Petit titre de la galerie,
+              name: galleryEyebrow,
+              widget: string,
+            }
+          - { label: Titre de la galerie, name: galleryTitle, widget: string }
+          - {
+              label: Petit titre de contact,
+              name: collectionEyebrow,
+              widget: string,
+            }
+          - { label: Titre de contact, name: collectionTitle, widget: string }
+          - {
+              label: Texte de contact,
+              name: collectionDescription,
+              widget: text,
+            }
+          - { label: Bouton WhatsApp, name: collectionButton, widget: string }
+  - name: catalog
+    label: Créations
+    files:
+      - name: creations
+        label: Galerie de créations
+        file: content/creations.json
+        fields:
+          - label: Produits
+            name: creations
+            widget: list
+            summary: "{{fields.title}} · {{fields.category}}"
+            fields:
+              - { label: Nom, name: title, widget: string }
+              - label: Catégorie
+                name: category
+                widget: select
+                options:
+                  - { label: Femmes, value: femmes }
+                  - { label: Hommes, value: hommes }
+                  - { label: Enfants, value: enfants }
+                  - { label: Accessoires, value: accessoires }
+              - { label: Photo, name: image, widget: image }
+              - {
+                  label: Texte alternatif de la photo,
+                  name: alt,
+                  widget: string,
+                }
+              - { label: Description courte, name: description, widget: string }
+              - {
+                  label: Afficher sur l'accueil,
+                  name: featured,
+                  widget: boolean,
+                  default: false,
+                }

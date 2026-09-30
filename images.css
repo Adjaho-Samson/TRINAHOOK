@@ -12,7 +12,7 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  background: #c2baba;
+  background: #f5f1ed;
   color: #1a1a1a;
   font-family: "Cormorant Garamond", serif;
   padding-top: 82px;
@@ -261,9 +261,9 @@ li {
 .about-text h2,
 .craft-section h2 {
   margin-bottom: 12px;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Cormorant Garamond", serif;
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .section-heading p {
@@ -320,6 +320,7 @@ li {
 
 .gallery-section {
   padding: 40px 7% 80px;
+  background: #fff;
 }
 
 .gallery-heading {
@@ -337,13 +338,12 @@ li {
 
 .creation-card {
   min-width: 0;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 22px;
+  background: #f8f5f2;
+  border-radius: 8px;
   overflow: hidden;
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease;
-  animation: cardAppear 0.45s ease;
 }
 
 .creation-card:hover {
@@ -442,7 +442,6 @@ li {
   text-align: center;
   margin-bottom: 50px;
 }
-
 
 .collection-cta {
   margin: 20px 7% 70px;
@@ -588,14 +587,28 @@ li {
   font-size: 15px;
 }
 
-@keyframes cardAppear {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.creation-card.scroll-reveal.is-visible:hover {
+  transform: translateY(-7px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+    transition: none;
   }
 }
 

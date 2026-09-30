@@ -7,7 +7,7 @@
       name="description"
       content="Trina Hook - Créations en maille faites main avec passion."
     />
-    <title>Trina Hook </title>
+    <title>Trina Hook</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Permanent+Marker&display=swap"
@@ -30,7 +30,6 @@
       gtag("config", "G-D8V2RYXD0K");
     </script>
     <link rel="icon" type="image/png" href="Images/logo.png" />
-
   </head>
   <body>
     <header class="site-header">
@@ -63,25 +62,29 @@
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <span class="hero-subtitle">TRINA HOOK</span>
-        <h1>L'élégance du fait main,<br />pensée pour vous.</h1>
-        <p>
+        <h1 data-content="homeHeroTitle">
+          L'élégance du fait main,<br />pensée pour vous.
+        </h1>
+        <p data-content="homeHeroDescription">
           Des créations uniques réalisées avec passion, où chaque maille raconte
           une histoire et chaque détail révèle notre savoir-faire.
         </p>
-        <a href="image.html" class="hero-button">Découvrir nos créations</a>
+        <a href="image.html" class="hero-button" data-content="homeHeroButton"
+          >Découvrir nos créations</a
+        >
       </div>
     </section>
 
     <section id="creations" class="creations-section">
       <div class="section-heading">
-        <span>FAIT MAIN AVEC PASSION</span>
-        <h2>Nos créations</h2>
-        <p>
+        <span data-content="homeCreationsEyebrow">FAIT MAIN AVEC PASSION</span>
+        <h2 data-content="homeCreationsTitle">Nos créations</h2>
+        <p data-content="homeCreationsDescription">
           Découvrez une sélection de nos pièces imaginées et réalisées
           entièrement à la main.
         </p>
       </div>
-      <div class="creations-grid">
+      <div class="creations-grid" id="featured-creations">
         <article class="creation-card">
           <div class="creation-image">
             <img
@@ -132,7 +135,10 @@
         </article>
       </div>
       <div class="creations-button">
-        <a href="image.html" class="secondary-button"
+        <a
+          href="image.html"
+          class="secondary-button"
+          data-content="homeCreationsButton"
           >Voir toute la collection</a
         >
       </div>
@@ -148,26 +154,32 @@
           />
         </div>
         <div class="story-content">
-          <span>NOTRE HISTOIRE</span>
-          <h2>Une passion transformée<br />en créations uniques.</h2>
-          <p>
-            Derrière Trina Hook se cache une passion profonde pour l'art du
-            crochet et du fait main.
-          </p>
-          <p>
-            Chaque création est pensée, dessinée et réalisée à la main avec
-            patience et précision. Nous accordons une attention particulière aux
-            détails afin de proposer des pièces uniques, élégantes et durables.
-          </p>
-          <p>
-            Nous sélectionnons avec soin nos matières afin d'offrir à chaque
-            client douceur, confort et qualité.
-          </p>
+          <span data-content="storyEyebrow">NOTRE HISTOIRE</span>
+          <h2 data-content="storyTitle">
+            Une passion transformée<br />en créations uniques.
+          </h2>
+          <div data-paragraphs="storyParagraphs">
+            <p>
+              Derrière Trina Hook se cache une passion profonde pour l'art du
+              crochet et du fait main.
+            </p>
+            <p>
+              Chaque création est pensée, dessinée et réalisée à la main avec
+              patience et précision. Nous accordons une attention particulière
+              aux détails afin de proposer des pièces uniques, élégantes et
+              durables.
+            </p>
+            <p>
+              Nous sélectionnons avec soin nos matières afin d'offrir à chaque
+              client douceur, confort et qualité.
+            </p>
+          </div>
           <a
             href="https://wa.me/22944985651"
             class="story-button"
             target="_blank"
             rel="noopener noreferrer"
+            data-content="storyButton"
             >Découvrir notre univers</a
           >
         </div>
@@ -176,14 +188,14 @@
 
     <section id="savoir-faire" class="know-how-section">
       <div class="section-heading">
-        <span>NOTRE SAVOIR-FAIRE</span>
-        <h2>L'art du fait main</h2>
-        <p>
+        <span data-content="processEyebrow">NOTRE SAVOIR-FAIRE</span>
+        <h2 data-content="processTitle">L'art du fait main</h2>
+        <p data-content="processDescription">
           Chaque étape est réalisée avec passion pour garantir une création qui
           vous ressemble.
         </p>
       </div>
-      <div class="know-how-grid">
+      <div class="know-how-grid" id="process-steps">
         <article class="know-how-card">
           <div class="know-how-icon"><i class="fa-solid fa-lightbulb"></i></div>
           <h3>Le Concept</h3>
@@ -290,5 +302,6 @@
         });
       });
     </script>
+    <script src="content-loader.js"></script>
   </body>
 </html>
