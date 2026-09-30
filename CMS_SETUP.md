@@ -7,11 +7,11 @@ Le panneau d'administration est disponible à `/admin/`. Il utilise Decap CMS av
 1. Dans [Decap Turbo](https://turbo.decapcms.org/), ouvrir le site déjà créé dont le Site ID est `d2b47249-5c72-4720-9ee2-74ad28666ab2`. Ne pas en créer un second.
 2. Dans **Git connection** sur l’organisation, installer l'application GitHub avec l'accès limité au dépôt `Adjaho-Samson/TRINAHOOK`, plutôt qu'à tous les dépôts.
 3. Dans les paramètres du site Turbo, vérifier le dépôt `Adjaho-Samson/TRINAHOOK`, la branche `main` et le chemin `admin/config.yml`.
-4. Dans **Admin interface URL(s)**, ajouter exactement `https://trinahook.vercel.app/admin/`.
+4. Dans **Admin interface URL(s)**, ajouter exactement l'origine `https://trinahook.vercel.app` — sans `/admin/` et sans barre oblique finale. Turbo compare l'origine de redirection, pas le chemin du panneau.
 5. Dans les membres du site, donner l'accès au compte Decap Turbo du propriétaire. Un compte Turbo sans accès à ce site ne peut pas modifier le contenu.
 6. Publier les changements du dépôt sur GitHub. Après le déploiement Vercel, ouvrir `https://trinahook.vercel.app/admin/` et choisir **Login with Turbo**.
 
-L'identifiant Turbo, `site_url` et `display_url` sont déjà renseignés dans `admin/config.yml`. La liste **Admin interface URL(s)** et les droits GitHub se règlent dans Decap Turbo, pas dans ce fichier.
+L'identifiant Turbo, `site_url` et `display_url` sont déjà renseignés dans `admin/config.yml`. La liste **Admin interface URL(s)** contient seulement l'origine `https://trinahook.vercel.app`; le panneau lui-même s'ouvre à `https://trinahook.vercel.app/admin/`. Cette liste et les droits GitHub se règlent dans Decap Turbo, pas dans le fichier.
 
 ## Gestion du contenu
 
