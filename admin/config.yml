@@ -4,6 +4,8 @@ backend:
   branch: main
 
 locale: fr
+site_url: https://trinahook.vercel.app
+display_url: https://trinahook.vercel.app
 media_folder: Images
 public_folder: /Images
 

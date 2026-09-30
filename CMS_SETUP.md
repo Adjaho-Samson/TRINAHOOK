@@ -2,17 +2,19 @@
 
 Le panneau d'administration est disponible à `/admin/`. Il utilise Decap CMS avec Decap Turbo pour l'authentification et l'accès au dépôt GitHub. Les enregistrements publiés modifient les fichiers du dépôt ; Vercel redéploie ensuite le site.
 
-## Connexion initiale
+## Autorisations et première connexion
 
-1. Créer une organisation sur [Decap Turbo](https://turbo.decapcms.org/signup).
-2. Dans **Git connection**, connecter GitHub et autoriser l'application Decap Turbo à accéder au dépôt `Adjaho-Samson/TRINAHOOK`.
-3. Créer un site dans Decap Turbo avec le dépôt `Adjaho-Samson/TRINAHOOK`, la branche `main` et le chemin de configuration `admin/config.yml`.
-4. Ajouter l'adresse publique complète du panneau dans **Admin interface URL(s)**, par exemple `https://votre-domaine.vercel.app/admin/`.
-5. Copier le **Site ID** affiché dans Decap Turbo et remplacer `REMPLACER_PAR_L_ID_DECAP_TURBO` dans `admin/config.yml`.
-6. Publier cette modification sur GitHub. Après le déploiement Vercel, ouvrir `/admin/` et se connecter avec le compte Decap Turbo autorisé sur ce site.
+1. Dans [Decap Turbo](https://turbo.decapcms.org/), ouvrir le site déjà créé dont le Site ID est `d2b47249-5c72-4720-9ee2-74ad28666ab2`. Ne pas en créer un second.
+2. Dans **Git connection** sur l’organisation, installer l'application GitHub avec l'accès limité au dépôt `Adjaho-Samson/TRINAHOOK`, plutôt qu'à tous les dépôts.
+3. Dans les paramètres du site Turbo, vérifier le dépôt `Adjaho-Samson/TRINAHOOK`, la branche `main` et le chemin `admin/config.yml`.
+4. Dans **Admin interface URL(s)**, ajouter exactement `https://trinahook.vercel.app/admin/`.
+5. Dans les membres du site, donner l'accès au compte Decap Turbo du propriétaire. Un compte Turbo sans accès à ce site ne peut pas modifier le contenu.
+6. Publier les changements du dépôt sur GitHub. Après le déploiement Vercel, ouvrir `https://trinahook.vercel.app/admin/` et choisir **Login with Turbo**.
+
+L'identifiant Turbo, `site_url` et `display_url` sont déjà renseignés dans `admin/config.yml`. La liste **Admin interface URL(s)** et les droits GitHub se règlent dans Decap Turbo, pas dans ce fichier.
 
 ## Gestion du contenu
 
 Dans **Créations**, le propriétaire peut ajouter, supprimer ou réordonner les fiches, changer les photos, les noms, les catégories et les descriptions, et choisir les quatre pièces mises en avant sur l'accueil. Dans **Textes du site**, il peut modifier les textes des deux pages et les étapes du savoir-faire.
 
-Le CMS Turbo est actuellement en bêta et demande la création du compte, la connexion GitHub et le Site ID avant que la connexion fonctionne. Ne partagez jamais un jeton GitHub dans les fichiers du site.
+Le backend Decap Turbo est actuellement en bêta. Ne partagez jamais un jeton GitHub dans les fichiers du site.
