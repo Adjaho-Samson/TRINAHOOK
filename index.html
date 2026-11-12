@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Trina Hook - Créations en maille faites main avec passion."
+      content="Trina Hook — Boutique de créations en maille faites main : robes, tops, chemises, ensembles bébé et accessoires au crochet, sur mesure."
     />
-    <title>Trina Hook</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="theme-color" content="#100e12" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Trina Hook — Créations en maille" />
+    <meta
+      property="og:description"
+      content="Des pièces uniques en crochet, faites main avec passion pour sublimer votre style."
+    />
+    <meta property="og:image" content="Images/img2.jpeg" />
+    <title>Trina Hook — Créations en maille faites main</title>
+    <link rel="icon" type="image/png" href="Images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Permanent+Marker&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/822d55b88d.js"
       crossorigin="anonymous"
@@ -29,279 +40,557 @@
       gtag("js", new Date());
       gtag("config", "G-D8V2RYXD0K");
     </script>
-    <link rel="icon" type="image/png" href="Images/logo.png" />
   </head>
   <body>
-    <header class="site-header">
-      <nav class="navbar">
-        <a href="#accueil" class="logo"
-          ><img src="Images/logo.png" alt="Trina Hook - Créations en maille"
-        /></a>
-        <ul class="nav-links">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#creations">Nos créations</a></li>
+    <div class="preloader" aria-hidden="true">
+      <img src="Images/logo.png" alt="" />
+    </div>
+
+    <div class="announcement" aria-hidden="true">
+      <div class="announcement-track" id="announcement-track">
+        <span data-content="announcement"
+          >Fait main avec passion <i>✦</i> Sur mesure <i>✦</i> Commande
+          simple sur WhatsApp <i>✦</i> Livraison soignée <i>✦</i></span
+        >
+      </div>
+    </div>
+
+    <header class="site-header" id="site-header">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="#accueil" class="logo" aria-label="Trina Hook — Accueil">
+          <img src="Images/logo.png" alt="Trina Hook — Créations en maille" />
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#accueil" class="is-active">Accueil</a></li>
+          <li><a href="#univers">Collections</a></li>
+          <li><a href="#creations">Créations</a></li>
           <li><a href="#histoire">Notre histoire</a></li>
-          <li><a href="#savoir-faire">Notre savoir-faire</a></li>
+          <li><a href="#savoir-faire">Savoir-faire</a></li>
+          <li><a href="#avis">Avis</a></li>
         </ul>
         <a
-          href="https://wa.me/22944985651"
+          href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20souhaite%20des%20informations%20sur%20vos%20cr%C3%A9ations."
           class="nav-contact"
           target="_blank"
           rel="noopener noreferrer"
         >
           <i class="fa-brands fa-whatsapp"></i>
-          <span>Nous contacter</span>
+          <span>Commander</span>
         </a>
-        <button class="menu-toggle" type="button" aria-label="Ouvrir le menu">
-          <i class="fa-solid fa-bars"></i>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span><span></span><span></span>
         </button>
       </nav>
     </header>
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
-    <section id="accueil" class="hero-section">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <span class="hero-subtitle">TRINA HOOK</span>
-        <h1 data-content="homeHeroTitle">
-          L'élégance du fait main,<br />pensée pour vous.
-        </h1>
-        <p data-content="homeHeroDescription">
-          Des créations uniques réalisées avec passion, où chaque maille raconte
-          une histoire et chaque détail révèle notre savoir-faire.
-        </p>
-        <a href="image.html" class="hero-button" data-content="homeHeroButton"
-          >Découvrir nos créations</a
-        >
-      </div>
-    </section>
+    <main>
+      <!-- ============ HERO ============ -->
+      <section id="accueil" class="hero-section">
+        <div class="wrap hero-grid">
+          <div class="hero-content">
+            <span class="hero-eyebrow hero-anim" style="animation-delay: 0.1s">
+              <i class="fa-solid fa-scissors"></i>
+              <span data-content="heroEyebrow"
+                >Atelier de crochet — Fait main</span
+              >
+            </span>
+            <h1 class="hero-anim" style="animation-delay: 0.22s">
+              <span data-content="homeHeroTitle">L'élégance du fait main,</span>
+              <em data-content="homeHeroTitleAccent">pensée pour vous.</em>
+            </h1>
+            <p class="hero-anim" style="animation-delay: 0.34s" data-content="homeHeroDescription">
+              Des créations uniques réalisées avec passion, où chaque maille
+              raconte une histoire et chaque détail révèle notre savoir-faire.
+            </p>
+            <div class="hero-actions hero-anim" style="animation-delay: 0.46s">
+              <a href="image.html" class="btn btn-primary">
+                <span data-content="homeHeroButton">Découvrir nos créations</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a
+                href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20souhaite%20une%20pi%C3%A8ce%20sur%20mesure."
+                class="btn btn-ghost"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+                <span data-content="heroSecondaryButton">Une pièce sur mesure</span>
+              </a>
+            </div>
+            <div class="hero-stats hero-anim" style="animation-delay: 0.58s">
+              <div class="hero-stat">
+                <strong><span data-stat="creations">49</span><sup>+</sup></strong>
+                <span>Créations uniques</span>
+              </div>
+              <div class="hero-stat">
+                <strong>4</strong>
+                <span>Univers</span>
+              </div>
+              <div class="hero-stat">
+                <strong>100<sup>%</sup></strong>
+                <span>Fait main</span>
+              </div>
+            </div>
+          </div>
 
-    <section id="creations" class="creations-section">
-      <div class="section-heading">
-        <span data-content="homeCreationsEyebrow">FAIT MAIN AVEC PASSION</span>
-        <h2 data-content="homeCreationsTitle">Nos créations</h2>
-        <p data-content="homeCreationsDescription">
-          Découvrez une sélection de nos pièces imaginées et réalisées
-          entièrement à la main.
-        </p>
-      </div>
-      <div class="creations-grid" id="featured-creations">
-        <article class="creation-card">
-          <div class="creation-image">
-            <img
-              src="Images/img1.jpeg"
-              alt="Top crochet marron"
-              loading="lazy"
-            />
+          <div class="hero-collage" aria-hidden="false">
+            <figure class="hero-photo hero-photo-main" data-parallax="14">
+              <img src="Images/img2.jpeg" alt="Robe sirène au crochet rose et bordeaux" fetchpriority="high" />
+            </figure>
+            <figure class="hero-photo hero-photo-small hero-photo-small-a" data-parallax="-20">
+              <img src="Images/img1.jpeg" alt="Top au crochet marron et crème" loading="lazy" />
+            </figure>
+            <figure class="hero-photo hero-photo-small hero-photo-small-b" data-parallax="24">
+              <img src="Images/img8.jpeg" alt="Jupe droite au crochet bleu, noir et blanc" loading="lazy" />
+            </figure>
+            <span class="hero-badge hero-badge-a">
+              <i class="fa-solid fa-hand-sparkles"></i> 100% fait main
+            </span>
+            <span class="hero-badge hero-badge-b">
+              <i class="fa-solid fa-ruler-combined"></i> Sur mesure possible
+            </span>
           </div>
-          <div class="creation-info">
-            <h3>Top Crochet Marron</h3>
-          </div>
-        </article>
-        <article class="creation-card">
-          <div class="creation-image">
-            <img
-              src="Images/img2.jpeg"
-              alt="Robe sirène crochet et polo"
-              loading="lazy"
-            />
-          </div>
-          <div class="creation-info">
-            <h3>Robe Sirène Crochet</h3>
-          </div>
-        </article>
-        <article class="creation-card">
-          <div class="creation-image">
-            <img
-              src="Images/img3.jpeg"
-              alt="Top papillon crochet"
-              loading="lazy"
-            />
-          </div>
-          <div class="creation-info">
-            <h3>Top Papillon</h3>
-          </div>
-        </article>
-        <article class="creation-card">
-          <div class="creation-image">
-            <img
-              src="Images/img4.jpeg"
-              alt="Robe longue crochet"
-              loading="lazy"
-            />
-          </div>
-          <div class="creation-info">
-            <h3>Robe Longue Crochet</h3>
-          </div>
-        </article>
-      </div>
-      <div class="creations-button">
-        <a
-          href="image.html"
-          class="secondary-button"
-          data-content="homeCreationsButton"
-          >Voir toute la collection</a
-        >
-      </div>
-    </section>
-
-    <section id="histoire" class="story-section">
-      <div class="story-container">
-        <div class="story-image">
-          <img
-            src="Images/img8.jpeg"
-            alt="Création Trina Hook"
-            loading="lazy"
-          />
         </div>
-        <div class="story-content">
-          <span data-content="storyEyebrow">NOTRE HISTOIRE</span>
-          <h2 data-content="storyTitle">
-            Une passion transformée<br />en créations uniques.
-          </h2>
-          <div data-paragraphs="storyParagraphs">
-            <p>
-              Derrière Trina Hook se cache une passion profonde pour l'art du
-              crochet et du fait main.
-            </p>
-            <p>
-              Chaque création est pensée, dessinée et réalisée à la main avec
-              patience et précision. Nous accordons une attention particulière
-              aux détails afin de proposer des pièces uniques, élégantes et
-              durables.
-            </p>
-            <p>
-              Nous sélectionnons avec soin nos matières afin d'offrir à chaque
-              client douceur, confort et qualité.
+        <a href="#univers" class="hero-scroll" aria-label="Faire défiler">
+          Défiler <i class="fa-solid fa-chevron-down"></i>
+        </a>
+      </section>
+
+      <!-- ============ BANDEAU ============ -->
+      <div class="marquee-band" aria-hidden="true">
+        <div class="marquee-track" id="marquee-track">
+          <span>Robes <b>✦</b> Tops <b>✦</b> Chemises <b>✦</b> Ensembles bébé <b>✦</b> Accessoires <b>✦</b> Fait main <b>✦</b></span>
+        </div>
+      </div>
+
+      <!-- ============ UNIVERS ============ -->
+      <section id="univers" class="section">
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <span class="eyebrow" data-content="universEyebrow">Nos univers</span>
+            <h2>
+              <span data-content="universTitle">Une création pour</span>
+              <em data-content="universTitleAccent">chacun</em>
+            </h2>
+            <p data-content="universDescription">
+              Explorez nos différentes collections et trouvez la pièce qui vous
+              ressemble.
             </p>
           </div>
+          <div class="univers-grid">
+            <a href="image.html?filter=femmes" class="univers-card reveal">
+              <img src="Images/img28.jpeg" alt="Robe au crochet verte et noire à franges" loading="lazy" />
+              <div class="univers-info">
+                <small>Collection</small>
+                <h3>Femmes</h3>
+                <span class="univers-link">Découvrir <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+            <a href="image.html?filter=hommes" class="univers-card reveal" style="transition-delay: 0.08s">
+              <img src="Images/img6.jpeg" alt="Chemise au crochet pour homme" loading="lazy" />
+              <div class="univers-info">
+                <small>Collection</small>
+                <h3>Hommes</h3>
+                <span class="univers-link">Découvrir <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+            <a href="image.html?filter=enfants" class="univers-card reveal" style="transition-delay: 0.16s">
+              <img src="Images/img14.jpeg" alt="Ensemble bébé au crochet" loading="lazy" />
+              <div class="univers-info">
+                <small>Collection</small>
+                <h3>Enfants</h3>
+                <span class="univers-link">Découvrir <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+            <a href="image.html?filter=accessoires" class="univers-card reveal" style="transition-delay: 0.24s">
+              <img src="Images/img11.jpeg" alt="Mini sacs au crochet colorés" loading="lazy" />
+              <div class="univers-info">
+                <small>Collection</small>
+                <h3>Accessoires</h3>
+                <span class="univers-link">Découvrir <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CRÉATIONS À LA UNE ============ -->
+      <section id="creations" class="section" style="padding-top: 0">
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <span class="eyebrow" data-content="homeCreationsEyebrow">Fait main avec passion</span>
+            <h2>
+              <span data-content="homeCreationsTitle">Nos</span>
+              <em data-content="homeCreationsTitleAccent">créations</em>
+            </h2>
+            <p data-content="homeCreationsDescription">
+              Découvrez une sélection de nos pièces imaginées et réalisées
+              entièrement à la main.
+            </p>
+          </div>
+          <div class="creations-grid" id="featured-creations">
+            <article class="creation-card">
+              <div class="creation-image">
+                <img src="Images/img1.jpeg" alt="Top crochet marron" loading="lazy" />
+                <span class="category-label">Femmes</span>
+              </div>
+              <div class="creation-info">
+                <h3>Top Crochet Marron</h3>
+                <p>Création au crochet</p>
+              </div>
+            </article>
+            <article class="creation-card">
+              <div class="creation-image">
+                <img src="Images/img2.jpeg" alt="Robe sirène crochet et polo" loading="lazy" />
+                <span class="category-label">Femmes</span>
+              </div>
+              <div class="creation-info">
+                <h3>Robe Sirène Crochet</h3>
+                <p>Création au crochet</p>
+              </div>
+            </article>
+            <article class="creation-card">
+              <div class="creation-image">
+                <img src="Images/img3.jpeg" alt="Top papillon crochet" loading="lazy" />
+                <span class="category-label">Femmes</span>
+              </div>
+              <div class="creation-info">
+                <h3>Top Papillon</h3>
+                <p>Création au crochet</p>
+              </div>
+            </article>
+            <article class="creation-card">
+              <div class="creation-image">
+                <img src="Images/img4.jpeg" alt="Robe longue crochet" loading="lazy" />
+                <span class="category-label">Femmes</span>
+              </div>
+              <div class="creation-info">
+                <h3>Robe Longue Crochet</h3>
+                <p>Création au crochet</p>
+              </div>
+            </article>
+          </div>
+          <div class="creations-cta reveal">
+            <a href="image.html" class="btn btn-dark">
+              <span data-content="homeCreationsButton">Voir toute la collection</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ HISTOIRE ============ -->
+      <section id="histoire" class="section story-section">
+        <div class="wrap story-grid">
+          <div class="story-media reveal reveal-left">
+            <img src="Images/img7.jpeg" alt="Robe longue au crochet dos nu multicolore" loading="lazy" />
+            <p class="story-quote">« Chaque maille compte, chaque détail a son importance. »</p>
+          </div>
+          <div class="story-content reveal reveal-right">
+            <span class="eyebrow" data-content="storyEyebrow">Notre histoire</span>
+            <h2>
+              <span data-content="storyTitle">Une passion transformée</span>
+              <em data-content="storyTitleAccent">en créations uniques.</em>
+            </h2>
+            <div data-paragraphs="storyParagraphs">
+              <p>
+                Derrière Trina Hook se cache une passion profonde pour l'art du
+                crochet et du fait main.
+              </p>
+              <p>
+                Chaque création est pensée, dessinée et réalisée à la main avec
+                patience et précision. Nous accordons une attention particulière
+                aux détails afin de proposer des pièces uniques, élégantes et
+                durables.
+              </p>
+              <p>
+                Nous sélectionnons avec soin nos matières afin d'offrir à chaque
+                client douceur, confort et qualité.
+              </p>
+            </div>
+            <div class="story-signature">
+              <img src="Images/logo.png" alt="Logo Trina Hook" loading="lazy" />
+              <div>
+                <strong>Trina Hook</strong>
+                <span>Créations en maille</span>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20d%C3%A9couvre%20votre%20univers%20et%20j%27aimerais%20en%20savoir%20plus."
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span data-content="storyButton">Découvrir notre univers</span>
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SAVOIR-FAIRE ============ -->
+      <section id="savoir-faire" class="section">
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <span class="eyebrow" data-content="processEyebrow">Notre savoir-faire</span>
+            <h2>
+              <span data-content="processTitle">L'art du</span>
+              <em data-content="processTitleAccent">fait main</em>
+            </h2>
+            <p data-content="processDescription">
+              Chaque étape est réalisée avec passion pour garantir une création
+              qui vous ressemble.
+            </p>
+          </div>
+          <div class="process-grid" id="process-steps">
+            <article class="process-card reveal">
+              <div class="process-icon"><i class="fa-solid fa-lightbulb"></i></div>
+              <h3>Le Concept</h3>
+              <p>
+                Nous imaginons des designs modernes, élégants et intemporels qui
+                donnent une nouvelle dimension à l'art du crochet.
+              </p>
+            </article>
+            <article class="process-card reveal" style="transition-delay: 0.1s">
+              <div class="process-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+              <h3>La Fabrication</h3>
+              <p>
+                Chaque pièce est confectionnée à la main avec patience, précision
+                et une attention particulière portée aux finitions.
+              </p>
+            </article>
+            <article class="process-card reveal" style="transition-delay: 0.2s">
+              <div class="process-icon"><i class="fa-solid fa-box-open"></i></div>
+              <h3>La Livraison</h3>
+              <p>
+                Chaque commande est préparée avec soin afin que votre création
+                arrive dans les meilleures conditions.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ AVIS ============ -->
+      <section id="avis" class="section testimonials-section">
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <span class="eyebrow" data-content="testimonialsEyebrow">Elles en parlent</span>
+            <h2>
+              <span data-content="testimonialsTitle">Nos clientes</span>
+              <em data-content="testimonialsTitleAccent">témoignent</em>
+            </h2>
+            <p data-content="testimonialsDescription">
+              La confiance de nos clientes est notre plus belle récompense.
+            </p>
+          </div>
+          <div class="testimonials-grid" id="testimonials-grid">
+            <article class="testimonial-card reveal">
+              <div class="testimonial-stars" aria-label="5 étoiles sur 5">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <blockquote>
+                « La robe sur mesure est magnifique, les finitions sont
+                impeccables. Je me sens unique à chaque fois que je la porte. »
+              </blockquote>
+              <div class="testimonial-author">
+                <span class="testimonial-avatar">A</span>
+                <div>
+                  <strong>Aïcha D.</strong>
+                  <span>Robe sur mesure</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card reveal" style="transition-delay: 0.1s">
+              <div class="testimonial-stars" aria-label="5 étoiles sur 5">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <blockquote>
+                « Commande simple sur WhatsApp, pièce reçue avec soin. La qualité
+                du crochet est vraiment au rendez-vous. »
+              </blockquote>
+              <div class="testimonial-author">
+                <span class="testimonial-avatar">M</span>
+                <div>
+                  <strong>Mariam S.</strong>
+                  <span>Ensemble top & jupe</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card reveal" style="transition-delay: 0.2s">
+              <div class="testimonial-stars" aria-label="5 étoiles sur 5">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <blockquote>
+                « J'ai offert un ensemble naissance pour ma fille, c'est doux,
+                délicat et fait avec tellement d'amour. Merci Trina Hook ! »
+              </blockquote>
+              <div class="testimonial-author">
+                <span class="testimonial-avatar">G</span>
+                <div>
+                  <strong>Grâce K.</strong>
+                  <span>Ensemble naissance</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CTA SUR MESURE ============ -->
+      <section class="section cta-section">
+        <div class="wrap cta-inner reveal">
+          <span class="eyebrow" data-content="collectionEyebrow">Une création vous plaît ?</span>
+          <h2>
+            <span data-content="collectionTitle">Créons quelque chose</span>
+            <em data-content="collectionTitleAccent">d'unique pour vous.</em>
+          </h2>
+          <p data-content="collectionDescription">
+            Chaque pièce peut être personnalisée selon vos envies, vos couleurs
+            et vos dimensions.
+          </p>
+          <ul class="cta-points">
+            <li><i class="fa-solid fa-check"></i> Couleurs au choix</li>
+            <li><i class="fa-solid fa-check"></i> Dimensions sur mesure</li>
+            <li><i class="fa-solid fa-check"></i> Conseils personnalisés</li>
+          </ul>
           <a
-            href="https://wa.me/22944985651"
-            class="story-button"
+            href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20souhaite%20une%20cr%C3%A9ation%20sur%20mesure."
+            class="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"
-            data-content="storyButton"
-            >Découvrir notre univers</a
           >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span data-content="collectionButton">Commander sur WhatsApp</span>
+          </a>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section id="savoir-faire" class="know-how-section">
-      <div class="section-heading">
-        <span data-content="processEyebrow">NOTRE SAVOIR-FAIRE</span>
-        <h2 data-content="processTitle">L'art du fait main</h2>
-        <p data-content="processDescription">
-          Chaque étape est réalisée avec passion pour garantir une création qui
-          vous ressemble.
-        </p>
-      </div>
-      <div class="know-how-grid" id="process-steps">
-        <article class="know-how-card">
-          <div class="know-how-icon"><i class="fa-solid fa-lightbulb"></i></div>
-          <h3>Le Concept</h3>
-          <p>
-            Nous imaginons des designs modernes, élégants et intemporels qui
-            donnent une nouvelle dimension à l'art du crochet.
-          </p>
-        </article>
-        <article class="know-how-card">
-          <div class="know-how-icon">
-            <i class="fa-solid fa-hand-sparkles"></i>
-          </div>
-          <h3>La Fabrication</h3>
-          <p>
-            Chaque pièce est confectionnée à la main avec patience, précision et
-            une attention particulière portée aux finitions.
-          </p>
-        </article>
-        <article class="know-how-card">
-          <div class="know-how-icon"><i class="fa-solid fa-box-open"></i></div>
-          <h3>La Livraison</h3>
-          <p>
-            Chaque commande est préparée avec soin afin que votre création
-            arrive dans les meilleures conditions.
-          </p>
-        </article>
-      </div>
-    </section>
-
+    <!-- ============ PIED DE PAGE ============ -->
     <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-box footer-about">
-          <h3>TRINA HOOK</h3>
-          <p>
-            Des pièces uniques faites main avec passion pour sublimer votre
-            style au quotidien.
-          </p>
-        </div>
-        <div class="footer-box footer-links">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#creations">Nos créations</a></li>
-            <li><a href="#histoire">Notre histoire</a></li>
-            <li><a href="#savoir-faire">Notre savoir-faire</a></li>
-          </ul>
-        </div>
-        <div class="footer-box footer-contact">
-          <h4>Restons en contact</h4>
-          <p>Une création vous plaît ? Contactez-nous directement.</p>
-          <div class="social-icons">
-            <a
-              href="https://wa.me/22944985651"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-              WhatsApp
-            </a>
-            <a
-              href="https://www.facebook.com/kha.di.71259"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <i class="fa-brands fa-facebook"></i>
-              Facebook
-            </a>
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="Images/logo.png" alt="Trina Hook — Créations en maille" loading="lazy" />
+            <p>
+              Des pièces uniques faites main avec passion pour sublimer votre
+              style au quotidien.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://wa.me/22944985651"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              </a>
+              <a
+                href="https://www.facebook.com/kha.di.71259"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f"></i> Facebook
+              </a>
+            </div>
+          </div>
+          <div class="footer-box">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#accueil">Accueil</a></li>
+              <li><a href="#univers">Collections</a></li>
+              <li><a href="#creations">Créations</a></li>
+              <li><a href="#histoire">Notre histoire</a></li>
+              <li><a href="#savoir-faire">Savoir-faire</a></li>
+              <li><a href="image.html">Toute la galerie</a></li>
+            </ul>
+          </div>
+          <div class="footer-box">
+            <h4>Collections</h4>
+            <ul>
+              <li><a href="image.html?filter=femmes">Femmes</a></li>
+              <li><a href="image.html?filter=hommes">Hommes</a></li>
+              <li><a href="image.html?filter=enfants">Enfants</a></li>
+              <li><a href="image.html?filter=accessoires">Accessoires</a></li>
+            </ul>
+          </div>
+          <div class="footer-box footer-contact">
+            <h4>Restons en contact</h4>
+            <ul>
+              <li>
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Commande &amp; questions sur WhatsApp</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i>
+                <span>Réponse rapide, 7j/7</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>Livraison soignée de chaque commande</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 TRINA HOOK. Tous droits réservés. Fait main avec ❤️</p>
+        <div class="footer-bottom">
+          <p>&copy; <span id="year">2026</span> Trina Hook. Tous droits réservés.</p>
+          <p>Fait main avec <i class="fa-solid fa-heart" style="color: var(--lavande)"></i> — Créations en maille</p>
+        </div>
       </div>
     </footer>
 
-    <script>
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navLinks = document.querySelector(".nav-links");
+    <a
+      href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20souhaite%20des%20informations."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Nous écrire sur WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="wa-tip">Une question ? Écrivez-nous</span>
+    </a>
 
-      menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        const icon = menuToggle.querySelector("i");
+    <!-- Fenêtre produit -->
+    <div class="product-modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel">
+        <button class="modal-close" type="button" data-close-modal aria-label="Fermer la fiche produit">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal-media">
+          <img id="modal-image" src="" alt="" />
+        </div>
+        <div class="modal-body">
+          <span class="category-label" id="modal-category">Femmes</span>
+          <h3 id="modal-title">Création</h3>
+          <p id="modal-description">Création au crochet.</p>
+          <ul class="modal-meta">
+            <li><i class="fa-solid fa-hand-sparkles"></i> Faite main, pièce unique</li>
+            <li><i class="fa-solid fa-ruler-combined"></i> Sur mesure possible (couleurs &amp; dimensions)</li>
+            <li><i class="fa-solid fa-box-open"></i> Préparée et livrée avec soin</li>
+          </ul>
+          <div class="modal-actions">
+            <a href="#" class="btn btn-primary" id="modal-order" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i> Commander
+            </a>
+            <a href="image.html" class="btn btn-dark">
+              Voir la galerie <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        if (navLinks.classList.contains("active")) {
-          icon.classList.remove("fa-bars");
-          icon.classList.add("fa-xmark");
-          menuToggle.setAttribute("aria-label", "Fermer le menu");
-        } else {
-          icon.classList.remove("fa-xmark");
-          icon.classList.add("fa-bars");
-          menuToggle.setAttribute("aria-label", "Ouvrir le menu");
-        }
-      });
-
-      document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navLinks.classList.remove("active");
-          const icon = menuToggle.querySelector("i");
-          icon.classList.remove("fa-xmark");
-          icon.classList.add("fa-bars");
-          menuToggle.setAttribute("aria-label", "Ouvrir le menu");
-        });
-      });
-    </script>
     <script src="content-loader.js"></script>
   </body>
 </html>

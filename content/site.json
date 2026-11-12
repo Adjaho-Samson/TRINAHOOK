@@ -1,24 +1,33 @@
 {
-  "homeCreationsTitle": "Nos créations",
+  "announcement": "Fait main avec passion ✦ Sur mesure ✦ Commande simple sur WhatsApp ✦ Livraison soignée ✦",
+  "heroEyebrow": "Atelier de crochet — Fait main",
+  "homeHeroTitle": "L'élégance du fait main,",
+  "homeHeroTitleAccent": "pensée pour vous.",
   "homeHeroDescription": "Des créations uniques réalisées avec passion, où chaque maille raconte une histoire et chaque détail révèle notre savoir-faire.",
-  "storyTitle": "Une passion transformée en créations uniques.",
-  "galleryTitle": "Nos créations",
-  "storyButton": "Découvrir notre univers",
+  "homeHeroButton": "Découvrir nos créations",
+  "heroSecondaryButton": "Une pièce sur mesure",
+  "homeCreationsEyebrow": "Fait main avec passion",
+  "homeCreationsTitle": "Nos",
+  "homeCreationsTitleAccent": "créations",
   "homeCreationsDescription": "Découvrez une sélection de nos pièces imaginées et réalisées entièrement à la main.",
   "homeCreationsButton": "Voir toute la collection",
-  "processTitle": "L'art du fait main",
-  "homeHeroButton": "Découvrir nos créations",
-  "collectionEyebrow": "UNE CRÉATION VOUS PLAÎT ?",
-  "galleryHeroTitle": "Des pièces d'exception pour des moments précieux.",
-  "processDescription": "Chaque étape est réalisée avec passion pour garantir une création qui vous ressemble.",
-  "collectionButton": "Commander sur WhatsApp",
-  "galleryHeroParagraphs": [
-    "Chaque création est entièrement réalisée à la main avec une attention infinie aux détails et une passion qui se ressent dans chaque maille.",
-    "Découvrez des pièces uniques au charme intemporel, conçues pour envelopper votre quotidien de douceur et sublimer votre style."
+  "universEyebrow": "Nos univers",
+  "universTitle": "Une création pour",
+  "universTitleAccent": "chacun",
+  "universDescription": "Explorez nos différentes collections et trouvez la pièce qui vous ressemble.",
+  "storyEyebrow": "Notre histoire",
+  "storyTitle": "Une passion transformée",
+  "storyTitleAccent": "en créations uniques.",
+  "storyParagraphs": [
+    "Derrière Trina Hook se cache une passion profonde pour l'art du crochet et du fait main.",
+    "Chaque création est pensée, dessinée et réalisée à la main avec patience et précision. Nous accordons une attention particulière aux détails afin de proposer des pièces uniques, élégantes et durables.",
+    "Nous sélectionnons avec soin nos matières afin d'offrir à chaque client douceur, confort et qualité."
   ],
-  "storyEyebrow": "NOTRE HISTOIRE",
-  "homeCreationsEyebrow": "FAIT MAIN AVEC PASSION",
-  "galleryEyebrow": "FAIT MAIN AVEC PASSION",
+  "storyButton": "Découvrir notre univers",
+  "processEyebrow": "Notre savoir-faire",
+  "processTitle": "L'art du",
+  "processTitleAccent": "fait main",
+  "processDescription": "Chaque étape est réalisée avec passion pour garantir une création qui vous ressemble.",
   "processSteps": [
     {
       "title": "Le Concept",
@@ -36,14 +45,39 @@
       "description": "Chaque commande est préparée avec soin afin que votre création arrive dans les meilleures conditions."
     }
   ],
-  "collectionTitle": "Créons quelque chose d'unique pour vous.",
-  "processEyebrow": "NOTRE SAVOIR-FAIRE",
-  "storyParagraphs": [
-    "Derrière Trina Hook se cache une passion profonde pour l'art du crochet et du fait main.",
-    "Chaque création est pensée, dessinée et réalisée à la main avec patience et précision. Nous accordons une attention particulière aux détails afin de proposer des pièces uniques, élégantes et durables.",
-    "Nous sélectionnons avec soin nos matières afin d'offrir à chaque client douceur, confort et qualité."
+  "testimonialsEyebrow": "Elles en parlent",
+  "testimonialsTitle": "Nos clientes",
+  "testimonialsTitleAccent": "témoignent",
+  "testimonialsDescription": "La confiance de nos clientes est notre plus belle récompense.",
+  "testimonials": [
+    {
+      "name": "Aïcha D.",
+      "role": "Robe sur mesure",
+      "text": "La robe sur mesure est magnifique, les finitions sont impeccables. Je me sens unique à chaque fois que je la porte."
+    },
+    {
+      "name": "Mariam S.",
+      "role": "Ensemble top & jupe",
+      "text": "Commande simple sur WhatsApp, pièce reçue avec soin. La qualité du crochet est vraiment au rendez-vous."
+    },
+    {
+      "name": "Grâce K.",
+      "role": "Ensemble naissance",
+      "text": "J'ai offert un ensemble naissance pour ma fille, c'est doux, délicat et fait avec tellement d'amour. Merci Trina Hook !"
+    }
+  ],
+  "galleryHeroTitle": "Des pièces d'exception",
+  "galleryHeroTitleAccent": "pour des moments précieux.",
+  "galleryHeroParagraphs": [
+    "Chaque création est entièrement réalisée à la main avec une attention infinie aux détails et une passion qui se ressent dans chaque maille.",
+    "Découvrez des pièces uniques au charme intemporel, conçues pour envelopper votre quotidien de douceur et sublimer votre style."
   ],
   "galleryHeroButton": "Voir nos créations",
+  "galleryEyebrow": "Fait main avec passion",
+  "galleryTitle": "Nos créations",
+  "collectionEyebrow": "Une création vous plaît ?",
+  "collectionTitle": "Créons quelque chose",
+  "collectionTitleAccent": "d'unique pour vous.",
   "collectionDescription": "Chaque pièce peut être personnalisée selon vos envies, vos couleurs et vos dimensions.",
-  "homeHeroTitle": "L'élégance du fait main, pensée pour vous."
+  "collectionButton": "Commander sur WhatsApp"
 }

@@ -17,9 +17,29 @@ collections:
         label: Pages et textes
         file: content/site.json
         fields:
+          - {
+              label: Bandeau d'annonce,
+              name: announcement,
+              widget: string,
+            }
+          - {
+              label: Petit titre du hero,
+              name: heroEyebrow,
+              widget: string,
+            }
           - { label: Titre d'accueil, name: homeHeroTitle, widget: string }
+          - {
+              label: Titre d'accueil (partie en italique),
+              name: homeHeroTitleAccent,
+              widget: string,
+            }
           - { label: Texte d'accueil, name: homeHeroDescription, widget: text }
           - { label: Bouton d'accueil, name: homeHeroButton, widget: string }
+          - {
+              label: Bouton secondaire du hero,
+              name: heroSecondaryButton,
+              widget: string,
+            }
           - {
               label: Titre de la sélection,
               name: homeCreationsEyebrow,
@@ -28,6 +48,11 @@ collections:
           - {
               label: Titre de la section créations,
               name: homeCreationsTitle,
+              widget: string,
+            }
+          - {
+              label: Titre des créations (partie en italique),
+              name: homeCreationsTitleAccent,
               widget: string,
             }
           - {
@@ -41,11 +66,32 @@ collections:
               widget: string,
             }
           - {
+              label: Petit titre des univers,
+              name: universEyebrow,
+              widget: string,
+            }
+          - { label: Titre des univers, name: universTitle, widget: string }
+          - {
+              label: Titre des univers (partie en italique),
+              name: universTitleAccent,
+              widget: string,
+            }
+          - {
+              label: Présentation des univers,
+              name: universDescription,
+              widget: text,
+            }
+          - {
               label: Petit titre de l'histoire,
               name: storyEyebrow,
               widget: string,
             }
           - { label: Titre de l'histoire, name: storyTitle, widget: string }
+          - {
+              label: Titre de l'histoire (partie en italique),
+              name: storyTitleAccent,
+              widget: string,
+            }
           - label: Paragraphes de l'histoire
             name: storyParagraphs
             widget: list
@@ -57,6 +103,11 @@ collections:
               widget: string,
             }
           - { label: Titre du savoir-faire, name: processTitle, widget: string }
+          - {
+              label: Titre du savoir-faire (partie en italique),
+              name: processTitleAccent,
+              widget: string,
+            }
           - {
               label: Présentation du savoir-faire,
               name: processDescription,
@@ -76,8 +127,41 @@ collections:
                   - { label: Colis, value: box-open }
               - { label: Description, name: description, widget: text }
           - {
+              label: Petit titre des avis,
+              name: testimonialsEyebrow,
+              widget: string,
+            }
+          - {
+              label: Titre des avis,
+              name: testimonialsTitle,
+              widget: string,
+            }
+          - {
+              label: Titre des avis (partie en italique),
+              name: testimonialsTitleAccent,
+              widget: string,
+            }
+          - {
+              label: Présentation des avis,
+              name: testimonialsDescription,
+              widget: text,
+            }
+          - label: Avis clientes
+            name: testimonials
+            widget: list
+            summary: "{{fields.name}} · {{fields.role}}"
+            fields:
+              - { label: Prénom, name: name, widget: string }
+              - { label: Pièce achetée, name: role, widget: string }
+              - { label: Avis, name: text, widget: text }
+          - {
               label: Titre de la galerie,
               name: galleryHeroTitle,
+              widget: string,
+            }
+          - {
+              label: Titre de la galerie (partie en italique),
+              name: galleryHeroTitleAccent,
               widget: string,
             }
           - label: Textes d'introduction de la galerie
@@ -101,6 +185,11 @@ collections:
               widget: string,
             }
           - { label: Titre de contact, name: collectionTitle, widget: string }
+          - {
+              label: Titre de contact (partie en italique),
+              name: collectionTitleAccent,
+              widget: string,
+            }
           - {
               label: Texte de contact,
               name: collectionDescription,
