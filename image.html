@@ -2,19 +2,28 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Trina Hook - Créations en maille faites main avec passion."
+      content="Trina Hook — Toute la collection de créations en maille faites main : robes, tops, chemises, ensembles bébé et accessoires au crochet."
     />
-    <title>TRINA HOOK </title>
-    <link rel="stylesheet" href="images.css" />
+    <meta name="theme-color" content="#100e12" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Trina Hook — Toute la collection" />
+    <meta
+      property="og:description"
+      content="Des pièces uniques en crochet, faites main avec passion pour sublimer votre style."
+    />
+    <meta property="og:image" content="Images/img2.jpeg" />
+    <title>Trina Hook — Toute la collection</title>
+    <link rel="icon" type="image/png" href="Images/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Permanent+Marker&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="images.css" />
     <script
       src="https://kit.fontawesome.com/822d55b88d.js"
       crossorigin="anonymous"
@@ -31,26 +40,35 @@
       gtag("js", new Date());
       gtag("config", "G-D8V2RYXD0K");
     </script>
-    <link rel="icon" type="image/png" href="Images/logo.png" />
-
   </head>
-
   <body>
-    <header class="site-header">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          <img src="Images/logo.png" alt="Trina Hook - Créations en maille" />
+    <div class="preloader" aria-hidden="true">
+      <img src="Images/logo.png" alt="" />
+    </div>
+
+    <div class="announcement" aria-hidden="true">
+      <div class="announcement-track" id="announcement-track">
+        <span data-content="announcement"
+          >Fait main avec passion <i>✦</i> Sur mesure <i>✦</i> Commande
+          simple sur WhatsApp <i>✦</i> Livraison soignée <i>✦</i></span
+        >
+      </div>
+    </div>
+
+    <header class="site-header" id="site-header">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="index.html" class="logo" aria-label="Trina Hook — Accueil">
+          <img src="Images/logo.png" alt="Trina Hook — Créations en maille" />
         </a>
-
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="#creations">Nos Créations</a></li>
-          <li><a href="#categories">Collections</a></li>
-
+          <li><a href="index.html#univers">Collections</a></li>
+          <li><a href="#creations" class="is-active">Créations</a></li>
+          <li><a href="index.html#histoire">Notre histoire</a></li>
+          <li><a href="index.html#savoir-faire">Savoir-faire</a></li>
         </ul>
-
         <a
-          href="https://wa.me/22944985651"
+          href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20souhaite%20des%20informations%20sur%20vos%20cr%C3%A9ations."
           class="nav-contact"
           target="_blank"
           rel="noopener noreferrer"
@@ -58,856 +76,965 @@
           <i class="fa-brands fa-whatsapp"></i>
           <span>Commander</span>
         </a>
-
-        <button class="menu-toggle" type="button" aria-label="Ouvrir le menu">
-          <i class="fa-solid fa-bars"></i>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span><span></span><span></span>
         </button>
       </nav>
     </header>
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
-    <section id="accueil" class="hero-section">
-      <div class="hero-content">
-        <div class="hero-text">
-          <span class="hero-small-title">TRINA HOOK</span>
-          <h1 data-content="galleryHeroTitle">Des pièces d'exception pour des moments précieux.</h1>
-          <div data-paragraphs="galleryHeroParagraphs">
-            <p>Chaque création est entièrement réalisée à la main avec une attention infinie aux détails et une passion qui se ressent dans chaque maille.</p>
-            <p>Découvrez des pièces uniques au charme intemporel, conçues pour envelopper votre quotidien de douceur et sublimer votre style.</p>
+    <main>
+      <!-- ============ HERO GALERIE ============ -->
+      <section class="gallery-hero">
+        <div class="wrap gallery-hero-inner">
+          <div>
+            <span class="hero-eyebrow hero-anim" style="animation-delay: 0.1s">
+              <i class="fa-solid fa-scissors"></i>
+              <span data-content="galleryEyebrow">Fait main avec passion</span>
+            </span>
+            <h1 class="hero-anim" style="animation-delay: 0.22s">
+              <span data-content="galleryHeroTitle">Des pièces d'exception</span>
+              <em data-content="galleryHeroTitleAccent">pour des moments précieux.</em>
+            </h1>
+            <div class="hero-anim" style="animation-delay: 0.34s" data-paragraphs="galleryHeroParagraphs">
+              <p>
+                Chaque création est entièrement réalisée à la main avec une
+                attention infinie aux détails et une passion qui se ressent dans
+                chaque maille.
+              </p>
+              <p>
+                Découvrez des pièces uniques au charme intemporel, conçues pour
+                envelopper votre quotidien de douceur et sublimer votre style.
+              </p>
+            </div>
+            <div class="gallery-hero-actions hero-anim" style="animation-delay: 0.46s">
+              <a href="#creations" class="btn btn-primary">
+                <span data-content="galleryHeroButton">Voir nos créations</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="index.html" class="btn btn-ghost">
+                <i class="fa-solid fa-arrow-left"></i> Retour à l'accueil
+              </a>
+            </div>
           </div>
-          <a href="#creations" class="hero-button" data-content="galleryHeroButton">Voir nos créations</a>
+          <div class="gallery-hero-media hero-anim" style="animation-delay: 0.3s">
+            <img src="Images/img8.jpeg" alt="Création artisanale Trina Hook" fetchpriority="high" />
+            <span class="gallery-hero-badge">
+              <i class="fa-solid fa-hand-sparkles"></i> 100% fait main
+            </span>
+          </div>
         </div>
+      </section>
 
-        <div class="hero-image">
-          <img src="Images/img8.jpeg" alt="Création artisanale Trina Hook" />
+      <!-- ============ FILTRES ============ -->
+      <div class="filter-bar" id="creations">
+        <div class="wrap filter-bar-inner">
+          <div class="category-buttons" role="group" aria-label="Filtrer par collection">
+            <button class="category-btn active" data-filter="all" type="button">
+              <i class="fa-solid fa-border-all"></i> Toutes
+              <span class="count" data-count="all">0</span>
+            </button>
+            <button class="category-btn" data-filter="femmes" type="button">
+              <i class="fa-solid fa-person-dress"></i> Femmes
+              <span class="count" data-count="femmes">0</span>
+            </button>
+            <button class="category-btn" data-filter="hommes" type="button">
+              <i class="fa-solid fa-person"></i> Hommes
+              <span class="count" data-count="hommes">0</span>
+            </button>
+            <button class="category-btn" data-filter="enfants" type="button">
+              <i class="fa-solid fa-baby"></i> Enfants
+              <span class="count" data-count="enfants">0</span>
+            </button>
+            <button class="category-btn" data-filter="accessoires" type="button">
+              <i class="fa-solid fa-bag-shopping"></i> Accessoires
+              <span class="count" data-count="accessoires">0</span>
+            </button>
+          </div>
+          <div class="filter-tools">
+            <label class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="search"
+                id="gallery-search"
+                placeholder="Rechercher une pièce…"
+                aria-label="Rechercher une création"
+              />
+            </label>
+            <p class="results-count" id="results-count" aria-live="polite"></p>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section id="categories" class="categories-section">
-      <div class="section-heading">
-        <span>NOS UNIVERS</span>
-        <h2>Une création pour chacun</h2>
-        <p>
-          Explorez nos différentes collections et trouvez la pièce qui vous
-          ressemble.
-        </p>
-      </div>
-
-      <div class="category-buttons">
-        <button class="category-btn active" data-filter="all" type="button">
-          <span class="category-icon">✦</span>
-          Toutes les créations
-        </button>
-
-        <button class="category-btn" data-filter="femmes" type="button">
-          <span class="category-icon">♡</span>
-          Femmes
-        </button>
-
-        <button class="category-btn" data-filter="hommes" type="button">
-          <span class="category-icon">◇</span>
-          Hommes
-        </button>
-
-        <button class="category-btn" data-filter="enfants" type="button">
-          <span class="category-icon">✿</span>
-          Enfants
-        </button>
-        <button class="category-btn" data-filter="accessoires" type="button">
-          <span class="category-icon">◇</span>
-          Accessoires
-        </button>
-      </div>
-    </section>
-
-    <main id="creations" class="gallery-section">
-      <div class="gallery-heading">
-        <span data-content="galleryEyebrow">FAIT MAIN AVEC PASSION</span>
-        <h2 data-content="galleryTitle">Nos Créations</h2>
-      </div>
-
-      <div class="gallery-grid" id="creation-gallery">
+      <!-- ============ GRILLE ============ -->
+      <section class="gallery-section">
+        <div class="wrap">
+          <div class="gallery-grid" id="creation-gallery">
         <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img1.jpeg"
-              alt="Top décolleté marron"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Top Crochet Marron" data-product-category="femmes" data-product-image="Images/img1.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img1.jpeg" alt="Top crochet marron" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Top Crochet Marron</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Top Crochet Marron%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img2.jpeg"
-              alt="Robe sirène crochet et polo"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Robe Sirène Crochet et Polo" data-product-category="femmes" data-product-image="Images/img2.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img2.jpeg" alt="Robe sirène crochet et polo" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Robe Sirène Crochet et Polo</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Robe Sirène Crochet et Polo%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img3.jpeg"
-              alt="Top papillon crochet"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Top Papillon Crochet" data-product-category="femmes" data-product-image="Images/img3.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img3.jpeg" alt="Top papillon crochet" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Top Papillon Crochet</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Top Papillon Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img4.jpeg"
-              alt="Robe longue crochet"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Robe Longue Crochet" data-product-category="femmes" data-product-image="Images/img4.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img4.jpeg" alt="Robe longue crochet" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Robe Longue Crochet</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Robe Longue Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
+          <div class="creation-image" data-product-title="Gilet Crochet" data-product-category="hommes" data-product-image="Images/img5.jpeg" data-product-description="Création au crochet">
             <img src="Images/img5.jpeg" alt="Gilet crochet" loading="lazy" />
             <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Gilet Crochet</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Gilet Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
+          <div class="creation-image" data-product-title="Chemise" data-product-category="hommes" data-product-image="Images/img6.jpeg" data-product-description="Création au crochet">
             <img src="Images/img6.jpeg" alt="Chemise crochet" loading="lazy" />
             <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Chemise</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Chemise%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img7.jpeg"
-              alt="Robe longue dos nu"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Robe Longue Dos Nu" data-product-category="femmes" data-product-image="Images/img7.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img7.jpeg" alt="Robe longue dos nu" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Robe Longue Dos Nu</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Robe Longue Dos Nu%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img8.jpeg"
-              alt="Jupe droite crochet"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Jupe Droite Crochet" data-product-category="femmes" data-product-image="Images/img8.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img8.jpeg" alt="Jupe droite crochet" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Jupe Droite Crochet</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Jupe Droite Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img9.jpeg"
-              alt="Bustier crochet fleur"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Bustier Crochet Fleur" data-product-category="femmes" data-product-image="Images/img9.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img9.jpeg" alt="Bustier crochet fleur" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Bustier Crochet Fleur</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Bustier Crochet Fleur%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="enfants">
-          <div class="image-wrapper">
-            <img
-              src="Images/img10.jpeg"
-              alt="Barboteuse crochet"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Barboteuse Crochet" data-product-category="enfants" data-product-image="Images/img10.jpeg" data-product-description="Création pour enfant">
+            <img src="Images/img10.jpeg" alt="Barboteuse crochet" loading="lazy" />
             <span class="category-label">Enfants</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Barboteuse Crochet</h3>
             <p>Création pour enfant</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Barboteuse Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
-        <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img11.jpeg"
-              alt="Mini sac crochet"
-              loading="lazy"
-            />
-            <span class="category-label">Accessoire</span>
+        <article class="creation-card" data-category="accessoires">
+          <div class="creation-image" data-product-title="Mini Sac Crochet" data-product-category="accessoires" data-product-image="Images/img11.jpeg" data-product-description="Accessoire au crochet">
+            <img src="Images/img11.jpeg" alt="Mini sac crochet" loading="lazy" />
+            <span class="category-label">Accessoires</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Mini Sac Crochet</h3>
             <p>Accessoire au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Mini Sac Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
-        <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img12.jpeg"
-              alt="Élastiques fleur crochet"
-              loading="lazy"
-            />
-            <span class="category-label">Femmes</span>
+        <article class="creation-card" data-category="accessoires">
+          <div class="creation-image" data-product-title="Élastiques Fleur Crochet" data-product-category="accessoires" data-product-image="Images/img12.jpeg" data-product-description="Accessoire au crochet">
+            <img src="Images/img12.jpeg" alt="Élastiques fleur crochet" loading="lazy" />
+            <span class="category-label">Accessoires</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Élastiques Fleur Crochet</h3>
-            <p>Création au crochet</p>
+            <p>Accessoire au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Élastiques Fleur Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="enfants">
-          <div class="image-wrapper">
-            <img
-              src="Images/img13.jpeg"
-              alt="Salopette pour bébé"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Salopette pour bébé" data-product-category="enfants" data-product-image="Images/img13.jpeg" data-product-description="Création pour enfant">
+            <img src="Images/img13.jpeg" alt="Salopette pour bébé" loading="lazy" />
             <span class="category-label">Enfants</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Salopette pour bébé</h3>
             <p>Création pour enfant</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Salopette pour bébé%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="enfants">
-          <div class="image-wrapper">
-            <img
-              src="Images/img14.jpeg"
-              alt="Ensemble de naissance"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Ensemble bébé Crochet" data-product-category="enfants" data-product-image="Images/img14.jpeg" data-product-description="Ensemble complet au crochet">
+            <img src="Images/img14.jpeg" alt="Ensemble de naissance" loading="lazy" />
             <span class="category-label">Enfants</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Ensemble bébé Crochet</h3>
             <p>Ensemble complet au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Ensemble bébé Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="enfants">
-          <div class="image-wrapper">
-            <img
-              src="Images/img15.jpeg"
-              alt="Kit bavoir et chaussons crochet"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Kit Bavoir &amp; Chaussons Crochet" data-product-category="enfants" data-product-image="Images/img15.jpeg" data-product-description="Création pour enfants">
+            <img src="Images/img15.jpeg" alt="Kit bavoir et chaussons crochet" loading="lazy" />
             <span class="category-label">Enfants</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3>Kit Bavoir & Chaussons Crochet</h3>
+            <h3>Kit Bavoir &amp; Chaussons Crochet</h3>
             <p>Création pour enfants</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Kit Bavoir &amp; Chaussons Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="enfants">
-          <div class="image-wrapper">
-            <img
-              src="Images/img16.jpeg"
-              alt="Robe pour bébé et chapeau"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Robe pour bébé &amp; Chapeau" data-product-category="enfants" data-product-image="Images/img16.jpeg" data-product-description="Ensemble pour bébé">
+            <img src="Images/img16.jpeg" alt="Robe pour bébé et chapeau" loading="lazy" />
             <span class="category-label">Enfants</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3>Robe pour bébé & Chapeau</h3>
+            <h3>Robe pour bébé &amp; Chapeau</h3>
             <p>Ensemble pour bébé</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Robe pour bébé &amp; Chapeau%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="enfants">
-          <div class="image-wrapper">
-            <img
-              src="Images/img17.jpeg"
-              alt="Parure robe et chaussons crochet"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Parure Robe &amp; Chaussons Crochet" data-product-category="enfants" data-product-image="Images/img17.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img17.jpeg" alt="Parure robe et chaussons crochet" loading="lazy" />
             <span class="category-label">Enfants</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3>Parure Robe & Chaussons Crochet</h3>
+            <h3>Parure Robe &amp; Chaussons Crochet</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Parure Robe &amp; Chaussons Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="enfants">
-          <div class="image-wrapper">
-            <img
-              src="Images/img18.jpeg"
-              alt="Salopette bébé crochet"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Salopette Bébé Crochet" data-product-category="enfants" data-product-image="Images/img18.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img18.jpeg" alt="Salopette bébé crochet" loading="lazy" />
             <span class="category-label">Enfants</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Salopette Bébé Crochet</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Salopette Bébé Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="enfants">
-          <div class="image-wrapper">
-            <img
-              src="Images/img19.jpeg"
-              alt="Kit naissance robe crochet"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Kit Naissance Robe Crochet" data-product-category="enfants" data-product-image="Images/img19.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img19.jpeg" alt="Kit naissance robe crochet" loading="lazy" />
             <span class="category-label">Enfants</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Kit Naissance Robe Crochet</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Kit Naissance Robe Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="enfants">
-          <div class="image-wrapper">
-            <img
-              src="Images/img20.jpeg"
-              alt="Ensemble naissance bébé"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Ensemble Naissance Bébé" data-product-category="enfants" data-product-image="Images/img20.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img20.jpeg" alt="Ensemble naissance bébé" loading="lazy" />
             <span class="category-label">Enfants</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Ensemble Naissance Bébé</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Ensemble Naissance Bébé%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img21.jpeg"
-              alt="Jupe longue crochet"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Jupe Longue Crochet" data-product-category="femmes" data-product-image="Images/img21.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img21.jpeg" alt="Jupe longue crochet" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Jupe Longue Crochet</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Jupe Longue Crochet%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-
         <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img22.jpeg"
-              alt="Ensemble crochet dos nu"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Ensemble Crochet Dos Nu" data-product-category="femmes" data-product-image="Images/img22.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img22.jpeg" alt="Ensemble crochet dos nu" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Ensemble Crochet Dos Nu</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Ensemble Crochet Dos Nu%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
         <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img23.jpeg"
-              alt="Cullote pour hommes"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Cullote pour hommes" data-product-category="hommes" data-product-image="Images/img23.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img23.jpeg" alt="Cullote pour hommes" loading="lazy" />
             <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Cullote pour hommes</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Cullote pour hommes%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
         <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img24.jpeg"
-              alt="Ensemble Chemise & Cullote"
-              loading="lazy"
-            />
+          <div class="creation-image" data-product-title="Ensemble Chemise &amp; Cullote" data-product-category="hommes" data-product-image="Images/img24.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img24.jpeg" alt="Ensemble chemise et cullote" loading="lazy" />
             <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3>Ensemble Chemise & Cullote</h3>
+            <h3>Ensemble Chemise &amp; Cullote</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Ensemble Chemise &amp; Cullote%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img25.jpeg"
-              alt="Robe"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="femmes">
+          <div class="creation-image" data-product-title="Robe" data-product-category="femmes" data-product-image="Images/img25.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img25.jpeg" alt="Robe au crochet" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Robe</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Robe%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img26.jpeg"
-              alt="Haut pour femmes"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="femmes">
+          <div class="creation-image" data-product-title="Haut top pour Femmes" data-product-category="femmes" data-product-image="Images/img26.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img26.jpeg" alt="Haut top pour femmes" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Haut top pour Femmes</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Haut top pour Femmes%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img27.jpeg"
-              alt="Haut pour femmes"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="femmes">
+          <div class="creation-image" data-product-title="Top haut pour Femmes" data-product-category="femmes" data-product-image="Images/img27.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img27.jpeg" alt="Top haut pour femmes" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3>Top haut pour Femmes<h3>
+            <h3>Top haut pour Femmes</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Top haut pour Femmes%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img28.jpeg"
-              alt="Robe"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="femmes">
+          <div class="creation-image" data-product-title="Robe Moulante" data-product-category="femmes" data-product-image="Images/img28.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img28.jpeg" alt="Robe moulante" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Robe Moulante</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Robe Moulante%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img29.jpeg"
-              alt="Mini haut pour femmes"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="femmes">
+          <div class="creation-image" data-product-title="Mini Haut pour Femme" data-product-category="femmes" data-product-image="Images/img29.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img29.jpeg" alt="Mini haut pour femme" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Mini Haut pour Femme</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Mini Haut pour Femme%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img30.jpeg"
-              alt="Chemise "
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="hommes">
+          <div class="creation-image" data-product-title="Chemise" data-product-category="hommes" data-product-image="Images/img30.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img30.jpeg" alt="Chemise au crochet" loading="lazy" />
             <span class="category-label">Hommes</span>
-          </div>
-          <div class="creation-info">
-            <h3>Chemise </h3>
-            <p>Création au crochet</p>
-          </div>
-        </article>
-             <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img31.jpeg"
-              alt="Chemise "
-              loading="lazy"
-            />
-            <span class="category-label">Hommes</span>
-          </div>
-          <div class="creation-info">
-            <h3> Chemise</h3>
-            <p>Création au crochet</p>
-          </div>
-        </article>
-             <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img32.jpeg"
-              alt="Ensemble Chemise & Cullote"
-              loading="lazy"
-            />
-            <span class="category-label">Hommes</span>
-          </div>
-          <div class="creation-info">
-            <h3>Ensemble Chemise & Cullote</h3>
-            <p>Création au crochet</p>
-          </div>
-        </article>
-             <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img33.jpeg"
-              alt="Chemise "
-              loading="lazy"
-            />
-            <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Chemise</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Chemise%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img35.jpeg"
-              alt="Chemise"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="hommes">
+          <div class="creation-image" data-product-title="Chemise" data-product-category="hommes" data-product-image="Images/img31.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img31.jpeg" alt="Chemise au crochet" loading="lazy" />
             <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3>Chemise </h3>
+            <h3>Chemise</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Chemise%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img36.jpeg"
-              alt=" Chemise "
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="hommes">
+          <div class="creation-image" data-product-title="Ensemble Chemise &amp; Cullote" data-product-category="hommes" data-product-image="Images/img32.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img32.jpeg" alt="Ensemble chemise et cullote" loading="lazy" />
             <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3>Chemise </h3>
+            <h3>Ensemble Chemise &amp; Cullote</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Ensemble Chemise &amp; Cullote%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img37.jpeg"
-              alt="Chemise "
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="hommes">
+          <div class="creation-image" data-product-title="Chemise" data-product-category="hommes" data-product-image="Images/img33.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img33.jpeg" alt="Chemise au crochet" loading="lazy" />
             <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3>Chemise </h3>
+            <h3>Chemise</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Chemise%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img38.jpeg"
-              alt="Ensemble Chemise & Cullote"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="hommes">
+          <div class="creation-image" data-product-title="Chemise" data-product-category="hommes" data-product-image="Images/img35.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img35.jpeg" alt="Chemise au crochet" loading="lazy" />
             <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3>Ensemble Chemise & Cullote</h3>
+            <h3>Chemise</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Chemise%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img39.jpeg"
-              alt="Ensemble Chemise & Robe"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="hommes">
+          <div class="creation-image" data-product-title="Chemise" data-product-category="hommes" data-product-image="Images/img36.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img36.jpeg" alt="Chemise au crochet" loading="lazy" />
+            <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
+          </div>
+          <div class="creation-info">
+            <h3>Chemise</h3>
+            <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Chemise%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
+          </div>
+        </article>
+        <article class="creation-card" data-category="hommes">
+          <div class="creation-image" data-product-title="Chemise" data-product-category="hommes" data-product-image="Images/img37.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img37.jpeg" alt="Chemise au crochet" loading="lazy" />
+            <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
+          </div>
+          <div class="creation-info">
+            <h3>Chemise</h3>
+            <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Chemise%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
+          </div>
+        </article>
+        <article class="creation-card" data-category="hommes">
+          <div class="creation-image" data-product-title="Ensemble Chemise &amp; Cullote" data-product-category="hommes" data-product-image="Images/img38.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img38.jpeg" alt="Ensemble chemise et cullote" loading="lazy" />
+            <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
+          </div>
+          <div class="creation-info">
+            <h3>Ensemble Chemise &amp; Cullote</h3>
+            <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Ensemble Chemise &amp; Cullote%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
+          </div>
+        </article>
+        <article class="creation-card" data-category="femmes">
+          <div class="creation-image" data-product-title="Ensemble Chemise &amp; Robe" data-product-category="femmes" data-product-image="Images/img39.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img39.jpeg" alt="Ensemble chemise et robe" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3>Ensemble Chemise & Robe</h3>
+            <h3>Ensemble Chemise &amp; Robe</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Ensemble Chemise &amp; Robe%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img40.jpeg"
-              alt="Chemise "
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="hommes">
+          <div class="creation-image" data-product-title="Chemise" data-product-category="hommes" data-product-image="Images/img40.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img40.jpeg" alt="Chemise au crochet" loading="lazy" />
             <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Chemise</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Chemise%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img41.jpeg"
-              alt="Chemises"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="hommes">
+          <div class="creation-image" data-product-title="Chemises" data-product-category="hommes" data-product-image="Images/img41.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img41.jpeg" alt="Chemises au crochet" loading="lazy" />
             <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Chemises</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Chemises%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="hommes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img42.jpeg"
-              alt=" Chemise "
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="hommes">
+          <div class="creation-image" data-product-title="Chemise" data-product-category="hommes" data-product-image="Images/img42.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img42.jpeg" alt="Chemise au crochet" loading="lazy" />
             <span class="category-label">Hommes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3> Chemise</h3>
+            <h3>Chemise</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Chemise%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img43.jpeg"
-              alt="Tenues pour la plage"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="femmes">
+          <div class="creation-image" data-product-title="Bikini" data-product-category="femmes" data-product-image="Images/img43.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img43.jpeg" alt="Tenue de plage au crochet" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Bikini</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Bikini%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img45.jpeg"
-              alt="Ensemble Haut & Jupe"
-              loading="lazy"
-            />
-            <span class="category-label">Hommes</span>
+        <article class="creation-card" data-category="femmes">
+          <div class="creation-image" data-product-title="Ensemble Haut &amp; Jupe" data-product-category="femmes" data-product-image="Images/img45.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img45.jpeg" alt="Ensemble haut et jupe" loading="lazy" />
+            <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3>Ensemble Haut & Jupe</h3>
+            <h3>Ensemble Haut &amp; Jupe</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Ensemble Haut &amp; Jupe%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img46.jpeg"
-              alt="Robe Moulante"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="femmes">
+          <div class="creation-image" data-product-title="Robe Moulante" data-product-category="femmes" data-product-image="Images/img46.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img46.jpeg" alt="Robe moulante" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Robe Moulante</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Robe Moulante%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img48.jpeg"
-              alt="Robee"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="femmes">
+          <div class="creation-image" data-product-title="Robe" data-product-category="femmes" data-product-image="Images/img48.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img48.jpeg" alt="Robe au crochet" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Robe</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Robe%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img49.jpeg"
-              alt="Ensemble Haut & Cullote"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="femmes">
+          <div class="creation-image" data-product-title="Ensemble Haut &amp; Cullote" data-product-category="femmes" data-product-image="Images/img49.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img49.jpeg" alt="Ensemble haut et cullote" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
-            <h3>Ensemble Haut & Cullote</h3>
+            <h3>Ensemble Haut &amp; Cullote</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Ensemble Haut &amp; Cullote%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-             <article class="creation-card" data-category="femmes">
-          <div class="image-wrapper">
-            <img
-              src="Images/img50.jpeg"
-              alt="Ensemble pour plage"
-              loading="lazy"
-            />
+        <article class="creation-card" data-category="femmes">
+          <div class="creation-image" data-product-title="Ensemble pour plage" data-product-category="femmes" data-product-image="Images/img50.jpeg" data-product-description="Création au crochet">
+            <img src="Images/img50.jpeg" alt="Ensemble pour plage" loading="lazy" />
             <span class="category-label">Femmes</span>
+            <span class="creation-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Voir la pièce</span>
           </div>
           <div class="creation-info">
             <h3>Ensemble pour plage</h3>
             <p>Création au crochet</p>
+            <div class="creation-actions">
+              <span class="price-note">Sur mesure</span>
+              <a class="order-btn" href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%C2%AB%20Ensemble pour plage%20%C2%BB%20vu(e)%20sur%20le%20site." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+            </div>
           </div>
         </article>
-      </div>
+          </div>
 
-      <div id="empty-message" class="empty-message">
-        <span>✦</span>
-        <h3>Bientôt de nouvelles créations</h3>
-        <p>Cette collection s'enrichira très prochainement.</p>
-      </div>
-    </main>
-
-
-    <section class="collection-cta">
-      <div>
-        <span data-content="collectionEyebrow">UNE CRÉATION VOUS PLAÎT ?</span>
-        <h2 data-content="collectionTitle">
-          Créons quelque chose<br />
-          d'unique pour vous.
-        </h2>
-        <p data-content="collectionDescription">
-          Chaque pièce peut être personnalisée selon vos envies, vos couleurs et
-          vos dimensions.
-        </p>
-        <a
-          href="https://wa.me/22944985651"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="cta-button"
-        >
-          <i class="fa-brands fa-whatsapp"></i>
-          <span data-content="collectionButton">Commander sur WhatsApp</span>
-        </a>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-box">
-          <h3>• TRINA HOOK •</h3>
-          <p>
-            Des pièces uniques faites main avec passion pour sublimer votre
-            style au quotidien.
-          </p>
-        </div>
-
-        <div class="footer-box">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="#creations">Nos Créations</a></li>
-            <li><a href="#categories">Collections</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-box">
-          <h4>Suivez l'aventure</h4>
-          <p>Découvrez nos coulisses au quotidien.</p>
-          <div class="social-icons">
-            <a
-              href="https://wa.me/22944985651"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-              WhatsApp
-            </a>
-            <a
-              href="https://www.facebook.com/kha.di.71259"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa-brands fa-facebook"></i>
-              Facebook
-            </a>
+          <div id="empty-message" class="empty-message">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Aucune création trouvée</h3>
+            <p>Essayez un autre mot-clé ou une autre collection.</p>
+            <button class="btn btn-dark" type="button" id="reset-filters">
+              Voir toute la collection
+            </button>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="footer-bottom">
-        <p>&copy; 2026 TRINA HOOK. Tous droits réservés. Fait main avec ❤️</p>
+      <!-- ============ CTA ============ -->
+      <section class="cta-section">
+        <div class="wrap cta-inner reveal">
+          <span class="eyebrow" data-content="collectionEyebrow">Une création vous plaît ?</span>
+          <h2>
+            <span data-content="collectionTitle">Créons quelque chose</span>
+            <em data-content="collectionTitleAccent">d'unique pour vous.</em>
+          </h2>
+          <p data-content="collectionDescription">
+            Chaque pièce peut être personnalisée selon vos envies, vos couleurs
+            et vos dimensions.
+          </p>
+          <a
+            href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20souhaite%20une%20cr%C3%A9ation%20sur%20mesure."
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span data-content="collectionButton">Commander sur WhatsApp</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ PIED DE PAGE ============ -->
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="Images/logo.png" alt="Trina Hook — Créations en maille" loading="lazy" />
+            <p>
+              Des pièces uniques faites main avec passion pour sublimer votre
+              style au quotidien.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://wa.me/22944985651"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              </a>
+              <a
+                href="https://www.facebook.com/kha.di.71259"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f"></i> Facebook
+              </a>
+            </div>
+          </div>
+          <div class="footer-box">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html#univers">Collections</a></li>
+              <li><a href="#creations">Créations</a></li>
+              <li><a href="index.html#histoire">Notre histoire</a></li>
+              <li><a href="index.html#savoir-faire">Savoir-faire</a></li>
+            </ul>
+          </div>
+          <div class="footer-box">
+            <h4>Collections</h4>
+            <ul>
+              <li><a href="#creations" data-goto-filter="femmes">Femmes</a></li>
+              <li><a href="#creations" data-goto-filter="hommes">Hommes</a></li>
+              <li><a href="#creations" data-goto-filter="enfants">Enfants</a></li>
+              <li><a href="#creations" data-goto-filter="accessoires">Accessoires</a></li>
+            </ul>
+          </div>
+          <div class="footer-box footer-contact">
+            <h4>Restons en contact</h4>
+            <ul>
+              <li>
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Commande &amp; questions sur WhatsApp</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i>
+                <span>Réponse rapide, 7j/7</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>Livraison soignée de chaque commande</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span id="year">2026</span> Trina Hook. Tous droits réservés.</p>
+          <p>Fait main avec <i class="fa-solid fa-heart" style="color: var(--lavande)"></i> — Créations en maille</p>
+        </div>
       </div>
     </footer>
 
-    <script>
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navLinks = document.querySelector(".nav-links");
+    <a
+      href="https://wa.me/22944985651?text=Bonjour%20Trina%20Hook%2C%20je%20souhaite%20des%20informations."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Nous écrire sur WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="wa-tip">Une question ? Écrivez-nous</span>
+    </a>
 
-      menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        const icon = menuToggle.querySelector("i");
+    <!-- Fenêtre produit -->
+    <div class="product-modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel">
+        <button class="modal-close" type="button" data-close-modal aria-label="Fermer la fiche produit">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal-media">
+          <img id="modal-image" src="" alt="" />
+        </div>
+        <div class="modal-body">
+          <span class="category-label" id="modal-category">Femmes</span>
+          <h3 id="modal-title">Création</h3>
+          <p id="modal-description">Création au crochet.</p>
+          <ul class="modal-meta">
+            <li><i class="fa-solid fa-hand-sparkles"></i> Faite main, pièce unique</li>
+            <li><i class="fa-solid fa-ruler-combined"></i> Sur mesure possible (couleurs &amp; dimensions)</li>
+            <li><i class="fa-solid fa-box-open"></i> Préparée et livrée avec soin</li>
+          </ul>
+          <div class="modal-actions">
+            <a href="#" class="btn btn-primary" id="modal-order" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i> Commander
+            </a>
+            <a href="index.html" class="btn btn-dark">
+              Retour à l'accueil <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        if (navLinks.classList.contains("active")) {
-          icon.classList.remove("fa-bars");
-          icon.classList.add("fa-xmark");
-          menuToggle.setAttribute("aria-label", "Fermer le menu");
-        } else {
-          icon.classList.remove("fa-xmark");
-          icon.classList.add("fa-bars");
-          menuToggle.setAttribute("aria-label", "Ouvrir le menu");
-        }
-      });
-
-      document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navLinks.classList.remove("active");
-          const icon = menuToggle.querySelector("i");
-          icon.classList.remove("fa-xmark");
-          icon.classList.add("fa-bars");
-        });
-      });
-
-    </script>
     <script src="content-loader.js"></script>
   </body>
 </html>
